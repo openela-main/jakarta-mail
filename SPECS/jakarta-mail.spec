@@ -1,6 +1,6 @@
 Name:           jakarta-mail
 Version:        1.6.5
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Jakarta Mail API
 License:        EPL-2.0 or GPLv2 with exceptions
 URL:            https://github.com/eclipse-ee4j/mail
@@ -76,6 +76,9 @@ sed -i "s/\${mail\.osgiversion}/%{version}/g" mailapi/pom.xml
 %doc README.md
 
 %changelog
+* Wed Nov 20 2024 Marián Konček <mkoncek@redhat.com> - 1.6.5-6
+- Rebuild with regenerated Requires on Java
+
 * Mon Aug 09 2021 Mohan Boddu <mboddu@redhat.com> - 1.6.5-5
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
